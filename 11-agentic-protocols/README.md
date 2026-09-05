@@ -76,7 +76,7 @@ Imagine a user wants to book a flight using an AI assistant powered by MCP.
 
 ### Try a real remote MCP connection
 
-The optional [Parallel Search MCP exercise](./code_samples/parallel-search-mcp/README.md) uses the course's Python MCP SDK dependency to connect to a remote server, discover tool schemas, search the public web, and fetch page text. It requires no local server, Azure subscription, or Parallel API key. Running it sends the sample queries, URLs, and objectives to Parallel; anonymous access is rate limited.
+The optional [Parallel Search MCP exercise](./code_samples/parallel-search-mcp/README.md) uses the Python MCP SDK 1.x (`mcp[cli]>=1.28,<2`), installed in a separate virtual environment as shown in the exercise, to connect to a remote server, discover tool schemas, search the public web, and fetch page text. It requires no local server, Azure subscription, or Parallel API key. Running it sends the sample queries, URLs, and objectives to Parallel; anonymous access is rate limited.
 
 ## Agent-to-Agent Protocol (A2A)
 

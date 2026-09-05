@@ -9,11 +9,9 @@ from mcp.types import CallToolResult
 
 
 def print_result(name: str, result: CallToolResult) -> None:
-    """Show one result representation, including warnings and per-URL errors."""
+    """Show the complete tool response before raising any tool error."""
     print(f"\n{name}:")
-    for content in result.content:
-        if content.type == "text":
-            print(content.text)
+    print(result.model_dump_json(by_alias=True, exclude_none=True, indent=2))
     if result.isError:
         raise RuntimeError(f"{name} failed; see the tool response above")
 

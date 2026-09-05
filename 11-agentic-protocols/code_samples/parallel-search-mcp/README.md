@@ -32,7 +32,7 @@ Running the script sends its search query, requested URL, objectives, and a rand
 3. **Search:** `web_search` receives both an objective and search queries, then returns public web results with source URLs and excerpts.
 4. **Fetch:** `web_fetch` extracts text from a known public documentation page. It does not control a browser or use your signed-in sessions.
 
-The output contains live results, so URLs and excerpts can change. The script prints the text representation of each tool response once, including warnings and any per-URL fetch errors. A fetch can contain successful pages and errors together; inspect both before using the results. An MCP tool error stops the script, and the whole exercise has a 90-second timeout. Connection failures and rate limits also surface as errors; wait before retrying rather than running repeated requests.
+The output contains live results, so URLs and excerpts can change. The script prints each complete tool response as JSON, including all content blocks, structured content, warnings, and any per-URL fetch errors. A fetch can contain successful pages and errors together; inspect both before using the results. An MCP tool error stops the script, and the whole exercise has a 90-second timeout. Connection failures and rate limits also surface as errors; wait before retrying rather than running repeated requests.
 
 Both calls share one randomly generated `session_id` for this exercise. This is separate from the HTTP transport session managed by the SDK.
 
